@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: vitaeon-backend
+    env: node
+    plan: free
+    rootDir: backend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start:prod
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+      - key: PORT
+        value: 10000
